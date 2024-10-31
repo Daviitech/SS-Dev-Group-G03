@@ -1,0 +1,1183 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "cyberguard 2",
+    "owner": "G03",
+    "description": "CyberGuard is a cutting-edge venture capital firm specializing in early-stage\ncyber security software investments. Founded by industry veterans, our mission is\nto empower innovative startups shaping the future of online protection. We invest\nin game-changing technologies addressing emerging threats and vulnerabilities\nin software and network connectivity. Our portfolio companies benefit from\nstrategic guidance, access to top talent, and extensive networking opportunities\nwithin the cyber security ecosystem. With a keen eye for disruption and potential,\nwe identify and support trailblazers poised to revolutionize the industry.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "David"
+      },
+      {
+        "name": "Andrea"
+      },
+      {
+        "name": "Daniel"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Cyberguard 2 Diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "position": {
+              "x": 60,
+              "y": 70
+            },
+            "size": {
+              "width": 140,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Enterprise\n\nGovernment\n\nAdmin"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "id": "9cc4987e-4276-425d-a511-d002b56be535",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Enterprise\n\nGovernment\n\nAdmin",
+              "description": "those are the actors of the system",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 220,
+              "y": 224
+            },
+            "size": {
+              "width": 160,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "User Interface Layer"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 2,
+            "id": "27b7f173-e33d-4ba0-b8e9-b6d35b81ad40",
+            "data": {
+              "type": "tm.Process",
+              "name": "User Interface Layer",
+              "description": "this comprises of the web-based dashboard, real-time visibility and Incident monitoring ",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "ebb39df5-12b0-4f11-ac00-47137e7ae6f1",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "An attacker might create a fake UI to capture user credentials",
+                  "mitigation": "Enforce HTTPS and require strong authentication methods, such as MFA, for access.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "4"
+                },
+                {
+                  "id": "f1415f71-2f02-42d9-adf8-65cb3d656ff4",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "The UI could be manipulated to display incorrect information to users",
+                  "mitigation": "Regularly validate UI code integrity, implement secure coding practices, and conduct security audits.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "6"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 797,
+              "y": 35
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "threat Intelligence DB"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 3,
+            "id": "ecb62df1-a431-4996-a96c-a59ac2d0105c",
+            "data": {
+              "type": "tm.Store",
+              "name": "threat Intelligence DB",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "a6499e3d-c2aa-45ba-886b-3f0553734fc7",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Unauthorized access or exposure of sensitive data, such as network logs or threat intelligence data, could lead to a data breach.",
+                  "mitigation": "Use encrypted storage, restrict access, and enforce automated updates to keep intelligence data secure.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "7"
+                },
+                {
+                  "id": "685334a9-c4ab-461d-aac8-7de2f6d1e68e",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Malicious actors might attempt to alter data in transit or stored in databases, potentially corrupting critical logs or security configurations.",
+                  "mitigation": "Validate data sources for threat intelligence, use checksum verification, and track data source authenticity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "8"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 797,
+              "y": 180
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Network Logs DB"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 4,
+            "id": "20e862ae-711d-4e40-aa3d-6bc271313c1d",
+            "data": {
+              "type": "tm.Store",
+              "name": "Network Logs DB",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "fc2d3532-469f-4fa9-b0ad-e2a6707538da",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "logs stored could be leaked to unauthorized entities.",
+                  "mitigation": "Encrypt logs at rest and in transit; restrict access to authorized roles.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "9"
+                },
+                {
+                  "id": "8b662c80-4602-49b6-a3f7-ae2ce3d9b407",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "The DB could be manipulated to display incorrect information to users.",
+                  "mitigation": "Enable immutability features for logs, implement logging integrity checks, and use secure storage locations.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "8"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 797,
+              "y": 383
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "System Config DB"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 5,
+            "id": "79515d92-5944-4552-a34e-513ebfb842c0",
+            "data": {
+              "type": "tm.Store",
+              "name": "System Config DB",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "a5aa267b-fccd-47df-a029-a74c96fb352a",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Malicious actors might attempt to alter data in transit or stored in databases, potentially corrupting critical logs or security configurations.",
+                  "mitigation": "Set permission boundaries, enforce MFA, and restrict configurations to privileged roles only.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "8"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 250,
+              "y": 510
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Central DB"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 7,
+            "id": "92b2d2ee-5023-44a2-8c5f-673c8eb31987",
+            "data": {
+              "type": "tm.Store",
+              "name": "Central DB",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "210b10ed-f030-46af-bfd3-3c564b055faa",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Malicious actors might attempt to alter data in transit or stored in databases, potentially corrupting critical logs or security configurations.",
+                  "mitigation": "Enable immutability features for logs, implement logging integrity checks, and use secure storage locations.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "8"
+                },
+                {
+                  "id": "a29adb55-bbd9-4f7a-b31d-568fd9657f6c",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Unauthorized access or exposure of sensitive data, such as network logs or threat intelligence data, could lead to a data breach.",
+                  "mitigation": "Use encrypted storage, restrict access, and enforce automated updates to keep intelligence data secure.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "7"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 540,
+              "y": 0
+            },
+            "size": {
+              "width": 160,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "Incident Response"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 8,
+            "id": "8cd5cb10-aaf1-4d7a-9949-df2e4adc9104",
+            "data": {
+              "type": "tm.Process",
+              "name": "Incident Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "798af3c2-22b2-4a64-8b58-2c22982a95d6",
+                  "title": "Repudiation ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Lack of accountability for actions taken by the incident response module could obscure incident tracking.",
+                  "mitigation": "Enable detailed logging and use secure timestamps to maintain a clear record of all actions performed.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "7"
+                },
+                {
+                  "id": "4dcf5a1c-bd34-4587-a332-c36b6a7a2a4a",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Unauthorized users may attempt to gain privileged access to initiate incident responses.",
+                  "mitigation": "Use role-based access control (RBAC), requiring elevated privileges for specific actions within the module, and implement multi-factor authentication (MFA).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "8"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 460,
+              "y": 180
+            },
+            "size": {
+              "width": 320,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Cloud based \nanalytics Engine"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 9,
+            "id": "163e6d4d-fa39-4e0c-a749-6b7d6ecbaa7b",
+            "data": {
+              "type": "tm.Process",
+              "name": "Cloud based \nanalytics Engine",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "37cb335b-afe4-4588-a705-dc30dbc638e8",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Unauthorized access could lead to data manipulation, causing inaccurate analytics.",
+                  "mitigation": "Use strong encryption for data in transit and rest, employ AWS IAM roles to restrict access, and ensure data integrity checks like hashing.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "9"
+                },
+                {
+                  "id": "85e4b0b2-9313-45f3-8575-6dccd39b8ccc",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Data processed by the engine could be leaked to unauthorized entities.",
+                  "mitigation": "Implement data encryption, access control policies, and secure logging practices with role-based access to sensitive information.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "5"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 540,
+              "y": 353
+            },
+            "size": {
+              "width": 160,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Integration with\nSIEM systems"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 10,
+            "id": "93714560-6aef-40de-99df-5a737c149d13",
+            "data": {
+              "type": "tm.Process",
+              "name": "Integration with\nSIEM systems",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "af1f786e-595e-4dd0-ad67-a595ee36fe6a",
+                  "title": "New STRIDE threat",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Data transferred between CyberSentry and the SIEM could be altered by attackers.",
+                  "mitigation": "Ensure data integrity through checksums, use TLS for encrypted connections, and set up audit logs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "7"
+                },
+                {
+                  "id": "f19c79d2-7858-4b2b-b833-5d0a2216c278",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An overload of data could cause SIEM integration issues, potentially missing important events.",
+                  "mitigation": "Implement data rate controls and create alert thresholds to prevent overloading the SIEM system.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "8"
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "eb61a40f-cb28-4c14-afab-c6e892cf0237",
+            "source": {
+              "x": 200,
+              "y": 155
+            },
+            "target": {
+              "cell": "27b7f173-e33d-4ba0-b8e9-b6d35b81ad40"
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary ",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "afc759d8-aa24-47a4-bf7d-a8d46c6aec97",
+            "labels": [
+              "Trust Boundary "
+            ],
+            "source": {
+              "x": 340,
+              "y": 70
+            },
+            "target": {
+              "x": 480,
+              "y": 510
+            },
+            "vertices": [
+              {
+                "x": 430,
+                "y": 220
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "61cf05cf-beae-4082-bfc1-e6da34084edd",
+            "labels": [
+              "Trust boundary"
+            ],
+            "source": {
+              "x": 730,
+              "y": 20
+            },
+            "target": {
+              "x": 750,
+              "y": 600
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": 400
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "256684b9-2f21-4d35-afbc-7bad91e030f2",
+            "labels": [
+              "Trust boundary"
+            ],
+            "source": {
+              "x": 190,
+              "y": 400
+            },
+            "target": {
+              "x": 390,
+              "y": 430
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "1132b6bd-4270-49d7-baa0-9fa690fcd3f3",
+                  "title": "New STRIDE threatData flow should use HTTP/S",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "These requests are made over the public internet and could be intercepted by an attacker.",
+                  "mitigation": "The requests should require HTTP/S. This will provide confidentiality and integrity. HTTP should not be supported.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "5"
+                }
+              ]
+            },
+            "id": "6b4acdec-bb56-4c7a-a400-e88020559900",
+            "source": {
+              "cell": "27b7f173-e33d-4ba0-b8e9-b6d35b81ad40"
+            },
+            "target": {
+              "x": 590,
+              "y": 120
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "4c5f1f76-4316-4d5f-a2fc-79a72780c041",
+                  "title": "Data flow should use HTTP/S",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "These requests are made over the public internet and could be intercepted by an attacker.",
+                  "mitigation": "The requests should require HTTP/S. This will provide confidentiality and integrity. HTTP should not be supported.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "5"
+                }
+              ]
+            },
+            "id": "7d95a347-9e50-49d2-a54a-4cd4b15963f6",
+            "source": {
+              "cell": "27b7f173-e33d-4ba0-b8e9-b6d35b81ad40"
+            },
+            "target": {
+              "cell": "92b2d2ee-5023-44a2-8c5f-673c8eb31987"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "77460556-42c3-4855-8dbf-fee1a68b2059",
+                  "title": "Data flow should use HTTP/S",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "These requests are made over the public internet and could be intercepted by an attacker.",
+                  "mitigation": "The requests should require HTTP/S. This will provide confidentiality and integrity. HTTP should not be supported.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "5"
+                }
+              ]
+            },
+            "id": "84c6a1a0-031e-4145-8238-c4cd8c200f03",
+            "source": {
+              "cell": "27b7f173-e33d-4ba0-b8e9-b6d35b81ad40"
+            },
+            "target": {
+              "cell": "163e6d4d-fa39-4e0c-a749-6b7d6ecbaa7b"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "7bd7f292-0647-43b9-a7dc-f894664d35b2",
+                  "title": "Data flow should use HTTP/S",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "These requests are made over the public internet and could be intercepted by an attacker.",
+                  "mitigation": "The requests should require HTTP/S. This will provide confidentiality and integrity. HTTP should not be supported.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "5"
+                }
+              ]
+            },
+            "id": "966bd8b0-18f5-4968-ba94-8dd8555724b2",
+            "source": {
+              "x": 677,
+              "y": 430
+            },
+            "target": {
+              "cell": "79515d92-5944-4552-a34e-513ebfb842c0"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "0b58da7d-9820-4991-add1-6d6276360879",
+                  "title": "Data flow should use HTTP/S",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "These requests are made over the public internet and could be intercepted by an attacker.",
+                  "mitigation": "The requests should require HTTP/S. This will provide confidentiality and integrity. HTTP should not be supported.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "5"
+                }
+              ]
+            },
+            "id": "0ce20262-2cde-412a-b138-831a3b322767",
+            "source": {
+              "x": 687,
+              "y": 240
+            },
+            "target": {
+              "cell": "20e862ae-711d-4e40-aa3d-6bc271313c1d"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ff8885ae-81d4-4cb4-a212-879902f9418c",
+                  "title": "Data flow should use HTTP/S",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "These requests are made over the public internet and could be intercepted by an attacker.",
+                  "mitigation": "The requests should require HTTP/S. This will provide confidentiality and integrity. HTTP should not be supported.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "5"
+                }
+              ]
+            },
+            "id": "e1b4e5c1-d4f4-42c2-9e67-517ba3e2311a",
+            "source": {
+              "x": 677,
+              "y": 35
+            },
+            "target": {
+              "x": 790,
+              "y": 90
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "dde553f1-5665-47e8-8a1b-6415688d969c",
+                  "title": "Data flow should use HTTP/S",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "These requests are made over the public internet and could be intercepted by an attacker.",
+                  "mitigation": "The requests should require HTTP/S. This will provide confidentiality and integrity. HTTP should not be supported.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "5"
+                },
+                {
+                  "id": "1d974bef-2e4e-427d-8c4a-2e273746f5eb",
+                  "title": "Tampering with Claim Data",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Attackers could alter claims data, leading to fraudulent claims processing or unauthorised claims approvals.",
+                  "mitigation": "Implement input validation, data integrity checks, and maintain an audit trail for all changes to claims data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "5"
+                }
+              ]
+            },
+            "id": "97b26408-a52a-466b-8959-cceca8014ceb",
+            "source": {
+              "cell": "79515d92-5944-4552-a34e-513ebfb842c0"
+            },
+            "target": {
+              "x": 370,
+              "y": 540
+            },
+            "vertices": [
+              {
+                "x": 660,
+                "y": 580
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "e3e0c37a-1568-45ed-9a1a-37877bd7875b",
+                  "title": "Data flow should use HTTP/S",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "These requests are made over the public internet and could be intercepted by an attacker.",
+                  "mitigation": "The requests should require HTTP/S. This will provide confidentiality and integrity. HTTP should not be supported.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "5"
+                }
+              ]
+            },
+            "id": "c2b7746e-8daa-4b2e-9979-a7458df05f79",
+            "source": {
+              "x": 350,
+              "y": 340
+            },
+            "target": {
+              "cell": "93714560-6aef-40de-99df-5a737c149d13"
+            },
+            "vertices": [
+              {
+                "x": 480,
+                "y": 360
+              },
+              {
+                "x": 570,
+                "y": 360
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Dr Mamoona Humayun & Dr Touseef Tahir",
+    "threatTop": 24
+  }
+}
